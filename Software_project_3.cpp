@@ -17,7 +17,241 @@ void program_exit();
 FILE* in_fp, * out_fp;
 int num = -1;
 
-// 회원 entity class
+
+
+
+//UI 선언
+
+// Class : UI
+// Descriptiom : signupUI 출력
+// created : 2022/05/30
+// Author : 윤경
+class SignUpUI {
+public:
+
+// Function : void fileWrite() - UI 출력
+//Discription : UI를 주어진 파일에 Write한다.
+//Parameters : x
+//Return Value : x
+//Created : 2022/05/30
+//Author : 윤경
+    void fileWrite() {
+        fprintf(out_fp, "1.1. 회원가입\n");
+    }
+};
+
+
+// Class : UI
+// Descriptiom : SignOutUI 출력
+// created : 2022/05/30
+// Author : 윤경
+class SignOutUI {
+
+    // Function : void fileWrite() - UI 출력
+    //Discription : UI를 주어진 파일에 Write한다.
+    //Parameters : x
+    //Return Value : x
+    //Created : 2022/05/30
+    //Author : 윤경
+public:
+    void fileWrite() {
+        fprintf(out_fp, "1.2. 회원탈퇴\n");
+    }
+};
+
+// Class : UI
+// Descriptiom : LoginUI 출력
+// created : 2022/05/30
+// Author : 윤경
+class LoginUI {
+    // Function : void fileWrite() - UI 출력
+    //Discription : UI를 주어진 파일에 Write한다.
+    //Parameters : x
+    //Return Value : x
+    //Created : 2022/05/30
+    //Author : 윤경
+public:
+    void fileWrite() {
+        fprintf(out_fp, "2.1. 로그인\n");
+    }
+};
+
+// Class : UI
+// Descriptiom : LogoutUI 출력
+// created : 2022/05/30
+// Author : 윤경
+class LogoutUI {
+    // Function : void fileWrite() - UI 출력
+    //Discription : UI를 주어진 파일에 Write한다.
+    //Parameters : x
+    //Return Value : x
+    //Created : 2022/05/30
+    //Author : 윤경
+public:
+    void fileWrite() {
+        fprintf(out_fp, "2.2. 로그아웃\n");
+    }
+};
+
+// Class : UI
+// Descriptiom : AddSellProductUI 출력
+// created : 2022/05/31
+// Author : 승환
+class AddSellProductUI {
+    // Function : void fileWrite() - UI 출력
+    //Discription : UI를 주어진 파일에 Write한다.
+    //Parameters : x
+    //Return Value : x
+    //Created : 2022/05/31
+    //Author : 승환
+public:
+    void fileWrite() {
+        fprintf(out_fp, "3.1. 판매의류등록\n");
+    }
+};
+
+// Class : UI
+// Descriptiom : ShowSellDataUI 출력
+// created : 2022/05/31
+// Author : 승환
+class ShowSellDataUI {
+    // Function : void fileWrite() - UI 출력
+    //Discription : UI를 주어진 파일에 Write한다.
+    //Parameters : x
+    //Return Value : x
+    //Created : 2022/05/31
+    //Author : 승환
+public:
+    void fileWrite() {
+        fprintf(out_fp, "3.2. 등록상품조회\n");
+    }
+};
+
+// Class : UI
+// Descriptiom : ShowSoldProductListUI 출력
+// created : 2022/05/31
+// Author : 승환
+class ShowSoldProductListUI {
+    // Function : void fileWrite() - UI 출력
+    //Discription : UI를 주어진 파일에 Write한다.
+    //Parameters : x
+    //Return Value : x
+    //Created : 2022/05/31
+    //Author : 승환
+public:
+    void fileWrite() {
+        fprintf(out_fp, "3.3. 판매완료상품조회\n");
+    }
+};
+
+// Class : UI
+// Descriptiom : SearchProductUI 출력
+// created : 2022/05/31
+// Author : 승환
+class SearchProductUI {
+    // Function : void fileWrite() - UI 출력
+    //Discription : UI를 주어진 파일에 Write한다.
+    //Parameters : x
+    //Return Value : x
+    //Created : 2022/05/31
+    //Author : 승환
+public:
+    void fileWrite() {
+        fprintf(out_fp, "4.1. 상품정보검색\n");
+    }
+};
+
+// Class : UI
+// Descriptiom : BuyProductUI 출력
+// created : 2022/05/31
+// Author : 승환
+class BuyProductUI {
+    // Function : void fileWrite() - UI 출력
+    //Discription : UI를 주어진 파일에 Write한다.
+    //Parameters : x
+    //Return Value : x
+    //Created : 2022/05/31
+    //Author : 승환
+public:
+    void fileWrite() {
+        fprintf(out_fp, "4.2. 상품구매\n");
+    }
+};
+
+// Class : UI
+// Descriptiom : ShowBuyListUI 출력
+// created : 2022/05/31
+// Author : 승환
+class ShowBuyListUI {
+    // Function : void fileWrite() - UI 출력
+    //Discription : UI를 주어진 파일에 Write한다.
+    //Parameters : x
+    //Return Value : x
+    //Created : 2022/05/31
+    //Author : 승환
+public:
+    void fileWrite() {
+        fprintf(out_fp, "4.3. 상품 구매내역 조회\n");
+    }
+};
+
+// Class : UI
+// Descriptiom : Eval_satisfyUI 출력
+// created : 2022/05/31
+// Author : 승환
+class Eval_satisfyUI {
+    // Function : void fileWrite() - UI 출력
+    //Discription : UI를 주어진 파일에 Write한다.
+    //Parameters : x
+    //Return Value : x
+    //Created : 2022/05/31
+    //Author : 승환
+public:
+    void fileWrite() {
+        fprintf(out_fp, "4.4. 상품 구매만족도 평가\n");
+    }
+};
+
+
+// Class : UI
+// Descriptiom : Show_static_soldoutUI 출력
+// created : 2022/06/01
+// Author : 민욱
+class Show_static_soldoutUI {
+    // Function : void fileWrite() - UI 출력
+    //Discription : UI를 주어진 파일에 Write한다.
+    //Parameters : x
+    //Return Value : x
+    //Created : 2022/06/01
+    //Author : 민욱
+public:
+    void fileWrite() {
+        fprintf(out_fp, "5.1. 판매 상품 통계\n");
+    }
+};
+
+// Class : UI
+// Descriptiom : Program_ExitUI 출력
+// created : 2022/06/01
+// Author : 민욱
+class Program_ExitUI {
+    // Function : void fileWrite() - UI 출력
+    //Discription : UI를 주어진 파일에 Write한다.
+    //Parameters : x
+    //Return Value : x
+    //Created : 2022/06/01
+    //Author : 민욱
+public:
+    void fileWrite() {
+        fprintf(out_fp, "6.1. 종료\n");
+    }
+};
+
+
+// Class : Client
+// Descriptiom : 회원의 속성과,생성자,함수들을 선언
+// created : 2022/05/28
+// Author : 윤경
 class Client {
 private:
     string id;
@@ -26,6 +260,14 @@ private:
     string socialSecurityNum;
 
 public:
+
+
+    // Function :  void createNewClient(string name, string socialSecurityNum, string id,string pw)
+    //Discription : 새로운 고객 객체 생성
+    //Parameters : string name - 이름, string socialSecurityNum - 주민번호 , string id -아이디,string pw - 비밀번호
+    //Return Value : x
+    //Created : 2022/05/28
+    //Author : 윤경
     void createNewClient(string name, string socialSecurityNum, string id,
         string pw) {
         this->id = id;
@@ -33,11 +275,38 @@ public:
         this->name = name;
         this->socialSecurityNum = socialSecurityNum;
     }
+
+    // Function : void removeClient(Client* client)
+    //Discription : 등록된 고객 객체 삭제
+    //Parameters : client - 고객 객체
+    //Return Value : x
+    //Created : 2022/05/28
+    //Author : 윤경
     void removeClient(Client* client) { delete[] client; }
+
+
+    // Function : string getClientId()
+    //Discription : 고객의 아이디를 반환
+    //Parameters : x
+    //Return Value : 고객의 ID
+    //Created : 2022/05/28
+    //Author : 윤경
     string getClientId() { return this->id; }
+
+
+    // Function : getClientPw()
+    //Discription : 고객의 비밀번호 반환
+    //Parameters : x
+    //Return Value : 고객의 비밀번호
+    //Created : 2022/05/28
+    //Author : 윤경
     string getClientPw() { return this->pw; }
 };
 
+// Class : Product
+// Descriptiom : 제품의 속성과,생성자,함수들을 선언
+// created : 2022/05/28
+// Author : 승환
 class Product {
 private:
     string name;
@@ -47,9 +316,11 @@ private:
     int satisfied;
     string clientId;
     int buycnt;
+    int soldcnt;
 public:
+
     Product(string name, string price, string company, int quantity,
-        int satisfied, string clientId, int buycnt) {
+        int satisfied, string clientId, int buycnt , int sellcnt) {
         this->name = name;
         this->price = price;
         this->company = company;
@@ -58,28 +329,149 @@ public:
         this->clientId = clientId;
         this->buycnt = buycnt;
     }
+
+    // Function : removeProduct(Product* product)
+    //Discription : 제품 객체 제거
+    //Parameters : product - 제품
+    //Return Value : x
+    //Created : 2022/05/28
+    //Author : 승환
     void removeProduct(Product* product) { delete[] product; }
+
+    // Function : string getName()
+    //Discription : 제품의 이름 반환
+    //Parameters : x
+    //Return Value : 제품의 이름
+    //Created : 2022/05/28
+    //Author : 승환
     string getName() { return this->name; }
+
+    // Function :   string getPrice()
+    //Discription : 제품의 가격 반환
+    //Parameters : x
+    //Return Value : 제품의 가격
+    //Created : 2022/05/28
+    //Author : 승환
     string getPrice() { return this->price; }
+
+
+    // Function :  string getCompany()
+    //Discription : 제품의 회사 반환
+    //Parameters : x
+    //Return Value : 제품의 회사
+    //Created : 2022/05/28
+    //Author : 승환
     string getCompany() { return this->company; }
+
+    // Function : int getQuantity()
+    //Discription : 제품의 수량 반환
+    //Parameters : x
+    //Return Value : 제품의 수량
+    //Created : 2022/05/28
+    //Author : 승환
     int getQuantity() { return this->quantity; }
+
+    // Function : int getSatisfied()
+    //Discription : 제품의 만족도 총합 반환
+    //Parameters : x
+    //Return Value : 제품의 만족도 총합
+    //Created : 2022/05/28
+    //Author : 승환
     int getSatisfied() { return this->satisfied; }
+
+    // Function : string getClientId()
+    //Discription : 고객의 id 반환
+    //Parameters : x
+    //Return Value : 고객의 id
+    //Created : 2022/05/28
+    //Author : 승환
     string getClientId() { return this->clientId; }
+
+    // Function :  int getBuyCnt()
+    //Discription : 제품의 구매횟수 반환
+    //Parameters : x
+    //Return Value : 제품의구매횟수
+    //Created : 2022/05/28
+    //Author : 승환
     int getBuyCnt() { return this->buycnt; }
+
+
+    // Function : int getSoldCnt()
+    //Discription : 제품의 판매횟수 반환
+    //Parameters : x
+    //Return Value : 제품의 판매 횟수
+    //Created : 2022/05/28
+    //Author : 승환
+    int getSoldCnt()  { return this->soldcnt; }
+
+
+    // Function : void setSold()
+    //Discription : 제품 판매시 제품의 수량 감소
+    //Parameters :  x
+    //Return Value : 제품의 양
+    //Created : 2022/05/28
+    //Author : 승환
+    void setSold() { this->quantity = quantity - 1; }
+
+
+    // Function : void setSoldcnt()
+    //Discription : 제품 판매시 판매 수량 증가
+    //Parameters :  x
+    //Return Value : 판매수량
+    //Created : 2022/05/28
+    //Author : 승환
+    void setSoldcnt() { this->soldcnt = soldcnt + 1; }
+
+    // Function :  void setBuyCnt()
+    //Discription : 제품의 구매수량 증가
+    //Parameters :  x
+    //Return Value :  제품의 구매 수량
+    //Created : 2022/05/28
+    //Author : 승환
     void setBuyCnt() { this->buycnt = buycnt + 1; }
+
+    // Function : void setSatisfied
+    //Discription : 제품의 구매만족도 추가
+    //Parameters : sc - 구매만족도
+    //Return Value :   x
+    //Created : 2022/05/28
+    //Author : 승환
     void setSatisfied(int sc) { this->satisfied = satisfied + sc; }
+
+
+    // Function : int getAvgSatisfied()
+    //Discription : 구매만족도 평균을 반환
+    //Parameters : x
+    //Return Value : 구매만족도의 평균
+    //Created : 2022/05/28
+    //Author : 승환
     int getAvgSatisfied() {
-        int ret = satisfied / buycnt;
-        return ret;
+        if (buycnt == 0)
+            return 0;
+        else
+            return satisfied / buycnt;
     }
-    int getrateProduct() {
-        int sum = quantity + 111;
+
+
+    // Function : int getTotalPrice()
+    //Discription : 제품의 총 판매금액 반환
+    //Parameters :  x
+    //Return Value : 제품의 총 판매금액
+    //Created : 2022/05/28
+    //Author : 민욱
+    int getTotalPrice() {
+        int sum = quantity * 1;
         return sum;
 
     }
 
 };
 
+
+// Class : OrderList
+// Descriptiom : 주문한 상품리스트의 속성과,함수들을 선언
+// created : 2022/05/29
+// Author : 승환
 class OrderList {
 private:
     string clientId;
@@ -91,30 +483,53 @@ public:
         this->orderVec.push_back(
             new Product(product->getName(), product->getPrice(),
                 product->getCompany(), product->getQuantity(),
-                product->getSatisfied(), product->getClientId(), product->getBuyCnt()));
+                product->getSatisfied(), product->getClientId(), product->getBuyCnt(),product->getSoldCnt()));
     }
+
+
+    // Function : vector<Product*> getProductVec()
+    //Discription : 제품의 리스트를 벡터 형태로 구현
+    //Parameters :  x
+    //Return Value : 제품의 리스트
+    //Created : 2022/05/29
+    //Author : 승환
     vector<Product*> getProductVec() { return this->orderVec; }
+
+
+    // Function : string getClientId()
+    //Discription : 고객의 id 반환
+    //Parameters :  x
+    //Return Value : 고객의 id
+    //Created : 2022/05/29
+    //Author : 승환
     string getClientId() { return this->clientId; }
 };
 
+
+// Class : SignUp
+// Descriptiom : 회원가입시 필요한 속성과 함수들을 선언
+// created : 2022/05/30
+// Author : 윤경
 Client* clientList[100];
 
-//회원가입 control class
-class signUp { // addclient-> signup 변경 (다이어그램)
+class SignUp { // addclient-> signup 변경 (다이어그램)
 public:
-    signUp(string name, string socialSecurityNum, string id, string pw) {
+    SignUp(string name, string socialSecurityNum, string id, string pw) {
         clientList[++num] = new Client();
         clientList[num]->createNewClient(name, socialSecurityNum, id, pw);
     }
 };
 
-//로그인 control class
-class login {
+// Class : Login
+// Descriptiom : 로그인시 필요한 속성과 함수들을 선언
+// created : 2022/05/30
+// Author : 윤경
+class Login {
 private:
     Client* loginClient;
 
 public:
-    login(string id, string pw) {
+    Login(string id, string pw) {
         for (int i = 0; i < num + 1; i++) {
             if (clientList[i]->getClientId() == id) {
                 if (clientList[i]->getClientPw() == pw)
@@ -122,51 +537,84 @@ public:
             }
         }
     }
+    // Function : Client* getCurrentClient()
+    //Discription : 로그인시 고객의 객체 반환
+    //Parameters :  x
+    //Return Value : 고객의 객체
+    //Created : 2022/05/30
+    //Author : 윤경
     Client* getCurrentClient() { return this->loginClient; }
 };
 
-//로그아웃 control class
-class logout {
+// Class : Logout
+// Descriptiom : 로그아웃시 필요한 속성과 함수들을 선언
+// created : 2022/05/30
+// Author : 윤경
+class Logout {
 private:
     Client* logoutClient;
 
 public:
-    logout(login* loginClient) {
+    Logout(Login* loginClient) {
         this->logoutClient = loginClient->getCurrentClient();
     }
+
+    // Function : string getLogoutClientId()
+    //Discription : 로그아웃이 고객의 아이디 반환
+    //Parameters :  x
+    //Return Value : 고객의 아이디 반환
+    //Created : 2022/05/30
+    //Author : 윤경
     string getLogoutClientId() { return logoutClient->getClientId(); }
 };
 
-//회원탈퇴 control class
-class signOut { // deleteclient-> signOut 변경 (다이어그램)
+// Class : SignOut
+// Descriptiom : 회원탈퇴시 필요한 속성과 함수들을 선언
+// created : 2022/05/30
+// Author : 윤경
+class SignOut { // deleteclient-> signOut 변경 (다이어그램)
 private:
     Client* signOutClient;
 
 public:
-    signOut(login* loginClient) {
+    SignOut(Login* loginClient) {
         this->signOutClient = loginClient->getCurrentClient();
     }
+
+    // Function : string getSignOutClientId()
+    //Discription : 회원가입시 고객의 아이디 반환
+    //Parameters :  x
+    //Return Value : 고객의 ID
+    //Created : 2022/05/30
+    //Author : 윤경
     string getSignOutClientId() { return signOutClient->getClientId(); }
 };
 
-// 판매의류등록
-Product* productList[100];
 
-class addSellProduct {
+// Class : AddSellProduct
+// Descriptiom : 판매상품들의 속성과,함수들을 선언
+// created : 2022/05/29
+// Author : 승환
+Product* productList[100];
+class AddSellProduct {
 public:
-    addSellProduct(string name, string price, string company, int quantity,
-        int satisfied, string clientId, int buycnt) {
+    AddSellProduct(string name, string price, string company, int quantity,
+        int satisfied, string clientId, int buycnt ,int sellcnt)  {
         productList[++num1] =
-            new Product(name, price, company, quantity, satisfied, clientId, buycnt);
+            new Product(name, price, company, quantity, satisfied, clientId, buycnt,sellcnt);
     }
 };
 
-// 판매완료상품조회
-Product* soldProductList[100];
+
+// Class : ShowSoldProductList
+// Descriptiom : 판매중인 상품들의 속성과,함수들을 선언
+// created : 2022/05/29
+// Author : 승환
 int num2 = -1;
-class showSoldProductList {
+Product* soldProductList[100];
+class ShowSoldProductList {
 public:
-    showSoldProductList() {
+    ShowSoldProductList() {
         for (int i = 0; i < num1 + 1; i++) {
             if (productList[i]->getQuantity() == 0) {
                 soldProductList[++num2] = productList[i];
@@ -175,7 +623,10 @@ public:
     }
 };
 
-// 상품정보검색
+// Class : SearchProduct
+// Descriptiom : 상품 탐색리스트의 속성과,함수들을 선언
+// created : 2022/05/29
+// Author : 승환
 class SearchProduct {
 public:
     string searchProductByName(string name) {
@@ -186,7 +637,10 @@ public:
     }
 };
 
-// 상품구매
+// Class : BuyProduct
+// Descriptiom : 구매완료한 상품리스트의 속성과,함수들을 선언
+// created : 2022/05/29
+// Author : 승환
 class BuyProduct {
 public:
     Product* getProduct(int i) { return productList[i]; }
@@ -195,10 +649,16 @@ public:
     }
 };
 
-// 상품 구매 내역 조회
 
+// Function : int main() - 메인함수
+//Discription : 입력파일의 읽기,쓰기 변수를 선언 및 주어진 작업 수행
+//Parameters : x
+//Return Value : 0
+//Created : 2022/05/30
+//Author : 윤경
 int main() {
-    // 파일 입출력을 위한 초기화
+
+
     in_fp = fopen(INPUT_FILE_NAME, "r+");
     out_fp = fopen(OUTPUT_FILE_NAME, "w+");
 
@@ -206,18 +666,38 @@ int main() {
     return 0;
 }
 
+// Function : void doTask() - 과제에서 요구하는 요구사항들 수행
+//Discription : 과제에서 주어진 요구사항을 수행하기위해 구현
+//Parameters : x
+//Return Value : x
+//Created : 2022/05/28
+//Author : 민욱
+
+//Revision : 2022/05/30 승환,윤경   // case 1.1~ 4.4 까지 구현
+//Revision : 2022/05/31 민욱 //  case 5.1, 6 구현 및 마무리 테스팅 및 디버깅
 void doTask() {
-    signUp* signUpClient;
-    signOut* signOutClient;
-    addSellProduct* addedProduct;
-    showSoldProductList* soldedProduct;
-    login* loginClient;
-    logout* logoutClient;
-    char name[MAX_STRING], socialSecurityNum[MAX_STRING], id[MAX_STRING],
-        pw[MAX_STRING];
+    LoginUI* loginOutput;
+    LogoutUI* logoutOutput;
+    SignUpUI* signUpOutput;
+    SignOutUI* signOutOutput;
+    AddSellProductUI* addSellProductOutput;
+    ShowSellDataUI* showSellDataOutput;
+    ShowSoldProductListUI* showSoldProductListOutput;
+    SearchProductUI* searchProductOutput;
+    BuyProductUI* buyProductOutput;
+    ShowBuyListUI* showBuyListUI;
+    Eval_satisfyUI* eval_satisfyUI;
+    Show_static_soldoutUI* show_static_soldoutUI;
+    Program_ExitUI* program_ExitUI;
+    SignUp* signUpClient;
+    SignOut* signOutClient;
+    AddSellProduct* addedProduct;
+    ShowSoldProductList* soldedProduct;
+    Login* loginClient;
+    Logout* logoutClient;
+    char name[MAX_STRING], socialSecurityNum[MAX_STRING], id[MAX_STRING],pw[MAX_STRING];
     char searchName[MAX_STRING];
     OrderList* orderL;
-    // 메뉴 파싱을 위한 level 구분을 위한 변수
     int menu_level_1 = 1, menu_level_2 = 1;
     int is_program_exit = 0;
     int readcount;
@@ -232,14 +712,16 @@ void doTask() {
             switch (menu_level_2) {
             case 1: // "1.1. 회원가입“
                 fscanf(in_fp, "%s %s %s %s", name, socialSecurityNum, id, pw);
-                signUpClient = new signUp(name, socialSecurityNum, id, pw);
-                fprintf(out_fp, "1.1. 회원가입\n");
+                signUpClient = new SignUp(name, socialSecurityNum, id, pw);
+                signUpOutput = new SignUpUI();
+                signUpOutput->fileWrite();
                 fprintf(out_fp, "%s %s %s %s\n", name, socialSecurityNum, id, pw);
                 break;
             case 2: // "1.2. 회원탈퇴"
                 //삭제어떻게함..?
-                signOutClient = new signOut(loginClient);
-                fprintf(out_fp, "1.2. 회원탈퇴\n");
+                signOutClient = new SignOut(loginClient);
+                signOutOutput = new SignOutUI();
+                signOutOutput->fileWrite();
                 fprintf(out_fp, "%s\n", signOutClient->getSignOutClientId().c_str());
                 break;
             }
@@ -255,16 +737,18 @@ void doTask() {
                 int i;
                 fscanf(in_fp, "%s %s", id, pw);
 
-                loginClient = new login(id, pw);
-                fprintf(out_fp, "2.1. 로그인\n");
+                loginClient = new Login(id, pw);
+                loginOutput = new LoginUI();
+                loginOutput->fileWrite();
                 fprintf(out_fp, "%s %s\n", id, pw);
 
                 break;
             }
             case 2: //"2.2. 로그아웃"
             {
-                logoutClient = new logout(loginClient);
-                fprintf(out_fp, "2.2. 로그아웃\n");
+                logoutClient = new Logout(loginClient);
+                logoutOutput = new LogoutUI();
+                logoutOutput->fileWrite();
                 fprintf(out_fp, "%s\n", logoutClient->getLogoutClientId().c_str());
                 break;
             }
@@ -280,36 +764,41 @@ void doTask() {
                 int quantity;
                 int satisfied1 = 0;
                 int buycnt = 1;
+                int sellcnt = 0;
                 string currId = loginClient->getCurrentClient()->getClientId();
-                fscanf(in_fp, "%s %s %s %d", name, price, company, &quantity
+                fscanf(in_fp, "%s %s %s %d", name, company, price, &quantity
                 );
-                addedProduct = new addSellProduct(name, price, company, quantity,
-                    satisfied1, currId, buycnt);
-                fprintf(out_fp, "3.1. 판매의류등록\n");
-                fprintf(out_fp, "%s %s %s %d\n", name, price, company, quantity
+                addedProduct = new AddSellProduct(name, price, company, quantity,
+                    satisfied1, currId, buycnt , sellcnt);
+                addSellProductOutput = new AddSellProductUI();
+                addSellProductOutput->fileWrite();
+                fprintf(out_fp, "%s %s %s %d\n", name, company, price, quantity
                 );
                 break;
             }
             case 2: {
-                fprintf(out_fp, "3.2. 등록상품조회\n");
+                showSellDataOutput = new ShowSellDataUI();
+                showSellDataOutput->fileWrite();
                 for (int i = 0; i < num1 + 1; i++) {
-                    fprintf(out_fp, "%s %s %s %d %d\n", productList[i]->getName().c_str(),
-                        productList[i]->getPrice().c_str(),
+                    fprintf(out_fp, "%s %s %s %d \n", productList[i]->getName().c_str(),
+
                         productList[i]->getCompany().c_str(),
-                        productList[i]->getQuantity(),
-                        productList[i]->getSatisfied());
+                        productList[i]->getPrice().c_str(),
+                        productList[i]->getQuantity());
+
                 }
                 break;
             }
             case 3: {
-                soldedProduct = new showSoldProductList();
-                fprintf(out_fp, "3.3. 판매완료상품조회\n");
+                soldedProduct = new ShowSoldProductList();
+                showSoldProductListOutput = new ShowSoldProductListUI();
+                showSoldProductListOutput->fileWrite();
                 for (int i = 0; i < num2 + 1; i++) {
                     fprintf(out_fp, "%s %s %s %d %d\n",
                         soldProductList[i]->getName().c_str(),
-                        soldProductList[i]->getPrice().c_str(),
                         soldProductList[i]->getCompany().c_str(),
-                        soldProductList[i]->getQuantity(),
+                        soldProductList[i]->getPrice().c_str(),
+                        soldProductList[i]->getQuantity(), //판매된 수량  != 총 수량
                         soldProductList[i]->getSatisfied());
                 }
                 break;
@@ -324,7 +813,8 @@ void doTask() {
                 for (int i = 0; i < num1 + 1; i++) {
                     if (productList[i]->getName() == searchName)
                         selectedIndex = i;
-                    fprintf(out_fp, "4.1. 상품정보검색\n");
+                    searchProductOutput = new SearchProductUI();
+                    searchProductOutput->fileWrite();
                     fprintf(out_fp, "%s %s %s %s %d %d\n",
                         productList[i]->getClientId().c_str(),
                         productList[i]->getName().c_str(),
@@ -339,7 +829,10 @@ void doTask() {
                 BuyProduct* by = new BuyProduct();
                 Product* p = by->getProduct(selectedIndex);
                 p->setBuyCnt();
-                fprintf(out_fp, "4.2. 상품구매\n");
+                p->setSold();
+                p->setSoldcnt();
+                buyProductOutput = new BuyProductUI();
+                buyProductOutput->fileWrite();
                 fprintf(out_fp, "%s %s\n", p->getClientId().c_str(),
                     p->getName().c_str());
                 break;
@@ -350,7 +843,8 @@ void doTask() {
                 Product* p = by->getProduct(selectedIndex);
                 orderL = new OrderList(cid, p);
                 Product* vec0 = orderL->getProductVec()[0];
-                fprintf(out_fp, "4.3. 상품구매내역조회\n");
+                showBuyListUI = new ShowBuyListUI();
+                showBuyListUI->fileWrite();
                 fprintf(out_fp, "%s %s %s %s %d %d\n", vec0->getClientId().c_str(),
                     vec0->getName().c_str(), vec0->getCompany().c_str(),
                     vec0->getPrice().c_str(), vec0->getQuantity(),
@@ -363,7 +857,8 @@ void doTask() {
                 BuyProduct* by = new BuyProduct();
                 Product* p = by->getProduct(selectedIndex);
                 p->setSatisfied(score);
-                fprintf(out_fp, "4.4. 상품구매내역조회\n");
+                eval_satisfyUI = new Eval_satisfyUI();
+                eval_satisfyUI->fileWrite();
                 fprintf(out_fp, "%s %s %d\n", p->getClientId().c_str(), p->getName().c_str(), p->getSatisfied());
                 break;
             }
@@ -373,14 +868,15 @@ void doTask() {
         case 5: {
             switch (menu_level_2) {
             case 1: {
-                
+
                 for (int i = 0; i < num1 + 1; i++) {
-                        if (productList[i]->getName() == searchName)
-                            
-                        fprintf(out_fp, "5.1. 판매 상품 통계 \n");
-                        fprintf(out_fp, "%s %d %d \n",productList[i]->getName().c_str(),productList[i]->getrateProduct(),
+                    if (productList[i]->getName() == searchName)
+
+                    show_static_soldoutUI = new Show_static_soldoutUI();
+                    show_static_soldoutUI->fileWrite();
+                    fprintf(out_fp, "%s %d %d \n", productList[i]->getName().c_str(), productList[i]->getTotalPrice(),
                         productList[i]->getAvgSatisfied());
-                    }
+                }
                 break;
             }
             }
@@ -389,7 +885,8 @@ void doTask() {
         case 6: {
             switch (menu_level_2) {
             case 1: {
-                fprintf(out_fp, "6.1 .종료 \n");
+                program_ExitUI = new Program_ExitUI();
+                program_ExitUI->fileWrite();
                 break;
 
             }
